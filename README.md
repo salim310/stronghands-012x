@@ -1,3 +1,11 @@
+
+this is a short term extension of v0122
+it will be deprecated soon by an updated code base
+
+
+
+
+
 # StrongHands Official Development Repository
 
 ## Repo Info
