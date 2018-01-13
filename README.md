@@ -57,8 +57,8 @@ Standard build tool is Qt `qmake`, the following is executed in /home/${USER}.
     sudo apt-get install libprotoc-dev libprotobuf-dev -y
     sudo apt-get install libpng-dev qrencode -y
     sudo apt-get install libqrencode-dev -y
-    git clone https://github.com/stronghandscommunity/stronghands
-    cd stronghands
+    git clone https://github.com/bumbacoin/stronghands-012x
+    cd stronghands-012x
     qmake USE_O3=1 USE_QRCODE=1 FIRST_CLASS_MESSAGING=1 RELEASE=1 USE_UPNPC=1
     make
 
