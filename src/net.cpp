@@ -1143,6 +1143,9 @@ void MapPort(bool /* unused fMapPort */)
 // The second name should resolve to a list of seed addresses.
 // testnet dns seed begins with 't', all else are stronghands dns seeds.
 static const char *strDNSSeed[][2] = {
+ {"shnd.ddns01.com", "shnd.ddns01.com"},
+ {"shnd01.dynu.net", "shnd01.dynu.net"},
+ {"shnd02.dynu.net", "shnd02.dynu.net"},
 
 };
 
