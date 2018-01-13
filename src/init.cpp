@@ -211,7 +211,7 @@ bool AppInit2(int argc, char* argv[])
             "  -noproxy=<net>   \t  "   + _("Do not use proxy for connections to network net (ipv4 or ipv6)") + "\n" +
             "  -dns             \t  "   + _("Allow DNS lookups for -addnode, -seednode and -connect") + "\n" +
             "  -proxydns        \t  "   + _("Pass DNS requests to (SOCKS5) proxy") + "\n" +
-            "  -port=<port>     \t\t  " + _("Listen for connections on <port> (default: 6901 or testnet: 9903)") + "\n" +
+            "  -port=<port>     \t\t  " + _("Listen for connections on <port> (default: 6901 or testnet: 6903)") + "\n" +
             "  -maxconnections=<n>\t  " + _("Maintain at most <n> connections to peers (default: 125)") + "\n" +
             "  -addnode=<ip>    \t  "   + _("Add a node to connect to and attempt to keep the connection open") + "\n" +
             "  -connect=<ip>    \t\t  " + _("Connect only to the specified node") + "\n" +
@@ -385,7 +385,7 @@ bool AppInit2(int argc, char* argv[])
     nStart = GetTimeMillis();
     if (!LoadAddresses())
         strErrors << _("Error loading addr.dat") << "\n";
-    printf(" addresses   %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" addresses   %15" PRI64d "ms\n", GetTimeMillis() - nStart);
 
     InitMessage(_("Loading block index..."));
     printf("Loading block index...\n");
@@ -401,7 +401,7 @@ bool AppInit2(int argc, char* argv[])
         printf("Shutdown requested. Exiting.\n");
         return false;
     }
-    printf(" block index %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" block index %15" PRI64d "ms\n", GetTimeMillis() - nStart);
 
     InitMessage(_("Loading wallet..."));
     printf("Loading wallet...\n");
@@ -456,7 +456,7 @@ bool AppInit2(int argc, char* argv[])
     }
 
     printf("%s", strErrors.str().c_str());
-    printf(" wallet      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" wallet      %15" PRI64d "ms\n", GetTimeMillis() - nStart);
 
     RegisterWallet(pwalletMain);
 
@@ -476,7 +476,7 @@ bool AppInit2(int argc, char* argv[])
         printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
         nStart = GetTimeMillis();
         pwalletMain->ScanForWalletTransactions(pindexRescan, true);
-        printf(" rescan      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+        printf(" rescan      %15" PRI64d "ms\n", GetTimeMillis() - nStart);
     }
 
     InitMessage(_("Done loading"));
@@ -691,7 +691,7 @@ bool AppInit2(int argc, char* argv[])
 #endif
 
 #if !defined(QT_GUI)
-    while (1)
+  for(;;)
         Sleep(5000);
 #endif
 

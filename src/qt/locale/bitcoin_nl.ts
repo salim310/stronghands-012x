@@ -259,9 +259,9 @@ Dit product bevat code ontwikkeld door het OpenSSL project voor het gebruik in h
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="107"/>
-        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PEERCOINS&lt;/b&gt;!
+        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STRONGHANDSS&lt;/b&gt;!
 Are you sure you wish to encrypt your wallet?</source>
-        <translation>WAARSCHUWING: Indien je de portemonnee versleutelt en je wachtwoordzin verliest, dan verlies je &lt;b&gt; AL JE PEERCOINS&lt;/b&gt;! 
+        <translation>WAARSCHUWING: Indien je de portemonnee versleutelt en je wachtwoordzin verliest, dan verlies je &lt;b&gt; AL JE STRONGHANDSS&lt;/b&gt;! 
 Weet je zeker dat je de portemonee wilt versleutelen?</translation>
     </message>
     <message>
@@ -2676,8 +2676,8 @@ Bedragen kleiner dan 0.546 keer de minimum vergoeding worden weergegeven als STO
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="30"/>
-        <source>Listen for connections on &lt;port&gt; (default: 6901 or testnet: 9903)</source>
-        <translation>Luister voor verbindingen op &lt;port&gt; (standaard:6901 of testnet: 9903)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 6901 or testnet: 6903)</source>
+        <translation>Luister voor verbindingen op &lt;port&gt; (standaard:6901 of testnet: 6903)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="31"/>
@@ -2913,7 +2913,7 @@ SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=peercoinrpc
+rpcuser=stronghandsrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.

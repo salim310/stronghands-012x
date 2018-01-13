@@ -27,7 +27,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Set database disk log size in megabytes (defa
 QT_TRANSLATE_NOOP("bitcoin-core", "Specify connection timeout (in milliseconds)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Connect through socks4 proxy"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Allow DNS lookups for addnode and connect"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Listen for connections on <port> (default: 6901 or testnet: 9903)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Listen for connections on <port> (default: 6901 or testnet: 6903)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Maintain at most <n> connections to peers (default: 125)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Add a node to connect to and attempt to keep the connection open"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Connect only to the specified node"),
@@ -104,7 +104,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "%s, you must set a rpcpassword in the configuration file:\n"
 " %s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=peercoinrpc\n"
+"rpcuser=stronghandsrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "If the file does not exist, create it with owner-readable-only file "

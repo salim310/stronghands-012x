@@ -259,9 +259,9 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;util
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="107"/>
-        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PEERCOINS&lt;/b&gt;!
+        <source>WARNING: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STRONGHANDSS&lt;/b&gt;!
 Are you sure you wish to encrypt your wallet?</source>
-        <translation>ATTENZIONE: Se cifri il tuo portafoglio e perdi la tua parola chiave, &lt;b&gt;PERDERAI TUTTI I TUOI PEERCOINS&lt;/b&gt;!
+        <translation>ATTENZIONE: Se cifri il tuo portafoglio e perdi la tua parola chiave, &lt;b&gt;PERDERAI TUTTI I TUOI STRONGHANDSS&lt;/b&gt;!
 Sei sicuro che vuoi cifrare il tuo portafoglio?</translation>
     </message>
     <message>
@@ -1829,7 +1829,7 @@ Questo significa che è necessaria una tariffa di almeno %2.</translation>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="208"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcune monete nel portafoglio sono state già spese, ad esempio se è stata usata una copia del file wallet.dat e i peercoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcune monete nel portafoglio sono state già spese, ad esempio se è stata usata una copia del file wallet.dat e i stronghands sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
 </context>
 <context>
@@ -2679,8 +2679,8 @@ Questo significa che è necessaria una tariffa di almeno %2.</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="30"/>
-        <source>Listen for connections on &lt;port&gt; (default: 6901 or testnet: 9903)</source>
-        <translation>Ascolta le connessioni JSON-RPC su &lt;porta&gt; (default: 8333 o testnet: 18333) {6901 ?} {9903)?}</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 6901 or testnet: 6903)</source>
+        <translation>Ascolta le connessioni JSON-RPC su &lt;porta&gt; (default: 8333 o testnet: 18333) {6901 ?} {6903)?}</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="31"/>
@@ -2918,7 +2918,7 @@ SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=peercoinrpc
+rpcuser=stronghandsrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
@@ -3057,7 +3057,7 @@ Se il file non esiste, crealo con permesso sola lettura del proprietario. </tran
     <message>
         <location filename="../bitcoinstrings.cpp" line="128"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcune monete nel portafoglio sono state già spese, ad esempio se è stata usata una copia del file wallet.dat e i peercoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcune monete nel portafoglio sono state già spese, ad esempio se è stata usata una copia del file wallet.dat e i stronghands sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="132"/>
