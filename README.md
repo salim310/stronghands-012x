@@ -62,6 +62,12 @@ Standard build tool is Qt `qmake`, the following is executed in /home/${USER}.
     qmake USE_O3=1 USE_QRCODE=1 FIRST_CLASS_MESSAGING=1 RELEASE=1 USE_UPNPC=1 stronghands.pro
     make
 
+if you get error
+Error in 'src/qt/bitcoin.qrc': Cannot find file 'locale/bitcoin_zh_TW.qm'
+
+    sudo apt-get install qttools5-dev-tools
+
+then qmake
 
 ## Build Qt client on OS X
 
