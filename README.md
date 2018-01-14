@@ -69,6 +69,12 @@ Error in 'src/qt/bitcoin.qrc': Cannot find file 'locale/bitcoin_zh_TW.qm'
 
 then qmake
 
+or error undefined reference to symbol 'dlclose@@GLIBC_2.2.5'
+add to stronghands.pro #452
+
+        # prevents error "undefined reference to symbol dlclose@@GLIBC_2.2.5" when using `-Wl,-Bstatic`
+        LIBS += -ldl
+
 ## Build Qt client on OS X
 
 ### Install Homebrew
