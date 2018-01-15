@@ -15,7 +15,11 @@ isEmpty(BDB_LIB_SUFFIX) {
 	windows:macx:BDB_LIB_SUFFIX = -4.8
 }
 
+BDB_INCLUDE_PATH=/home/happy/db-4.8.30.NC/build_mxe
+BDB_LIB_PATH=/home/happy/db-4.8.30.NC/build_mxe
 
+QRENCODE_LIB_PATH=/home/happy/qrencode-3.4.4/.libs
+QRENCODE_INCLUDE_PATH=/home/happy/qrencode-3.4.4/
 
 !windows:!unix {
     CONFIG += static
@@ -37,40 +41,6 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
 
-# winbuild dependencies
-windows {
-    contains(MXE, 1) {
-        BDB_INCLUDE_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/include
-        BDB_LIB_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/lib
-        BOOST_INCLUDE_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/include/boost
-        BOOST_LIB_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/lib
-        BOOST_LIB_SUFFIX=-mt
-        BOOST_THREAD_LIB_SUFFIX=_win32-mt
-        CXXFLAGS=-std=gnu++11 -march=i686
-        LDFLAGS=-march=i686
-        MINIUPNPC_INCLUDE_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/include
-        MINIUPNPC_LIB_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/lib
-        OPENSSL_INCLUDE_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/include/openssl
-        OPENSSL_LIB_PATH=/usr/lib/mxe/usr/i686-w64-mingw32.static/lib
-        PATH=/usr/lib/mxe/usr/bin:/home/gjh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-        QMAKE_LRELEASE=/usr/lib/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease
-        QTDIR=/usr/lib/mxe/usr/i686-w64-mingw32.static/qt5
-    }else{
-        lessThan(QT_VERSION, 5.4) {
-    		BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-    	} else {
-    		BOOST_LIB_SUFFIX=-mgw49-mt-s-1_55
-    	}
-    	BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-    	BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-    	BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-    	BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-    	OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1i/include
-    	OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1i
-    	MINIUPNPC_INCLUDE_PATH=C:/deps
-    	MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-    }
-}
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -374,11 +344,11 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    win32:BOOST_LIB_SUFFIX = -mgw44-mt-s-1_50
+    windows:BOOST_LIB_SUFFIX = -mt
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {
-    BOOST_THREAD_LIB_SUFFIX = $$BOOST_LIB_SUFFIX
+    BOOST_THREAD_LIB_SUFFIX = _win32$$BOOST_LIB_SUFFIX
 }
 
 isEmpty(BDB_LIB_PATH) {
@@ -442,7 +412,7 @@ INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$
 LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,) $$join(MINIUPNPC_LIB_PATH,,-L,)
 LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
-windows:LIBS += -lole32 -luuid -lgdi32
+windows:LIBS += -lole32 -luuid -lgdi32 -lpthread
 LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
 
 contains(RELEASE, 1) {
