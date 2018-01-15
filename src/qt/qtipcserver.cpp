@@ -16,6 +16,14 @@ using namespace boost::posix_time;
 using namespace boost;
 using namespace std;
 
+#ifdef MAC_OSX
+// URI handling not implemented on OSX yet
+
+void ipcInit() { }
+void ipcShutdown() { }
+
+#else
+
 void ipcShutdown()
 {
     message_queue::remove(BITCOINURI_QUEUE_NAME);
@@ -88,3 +96,5 @@ void ipcInit()
         delete mq;
     }
 }
+
+#endif

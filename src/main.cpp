@@ -2574,12 +2574,13 @@ string GetWarnings(string strFor)
     }
 
     // stronghands: wallet lock warning for minting
+/*	not working with qt5
     if (strMotivational != "")
     {
         nPriority = 101;
         strStatusBar = strMotivational;
     }
-
+*/
     // Misc warnings like out of disk space and clock is wrong
     if (strMiscWarning != "")
     {
