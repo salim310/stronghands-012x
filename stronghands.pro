@@ -10,8 +10,6 @@ CONFIG += qt_framework
 QT += core gui network
 CONFIG += link_pkgconfig
 
-USE_QRCODE=1
-
 isEmpty(BDB_LIB_SUFFIX) {
 	# !macx:unix:BDB_LIB_SUFFIX = -5.3
 	windows:macx:BDB_LIB_SUFFIX = -4.8

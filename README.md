@@ -1,3 +1,11 @@
+
+this is a short term extension of v0122
+it will be deprecated soon by an updated code base
+
+
+
+
+
 # StrongHands Official Development Repository
 
 ## Repo Info
@@ -49,11 +57,23 @@ Standard build tool is Qt `qmake`, the following is executed in /home/${USER}.
     sudo apt-get install libprotoc-dev libprotobuf-dev -y
     sudo apt-get install libpng-dev qrencode -y
     sudo apt-get install libqrencode-dev -y
-    git clone https://github.com/stronghandscommunity/stronghands
-    cd stronghands
-    qmake USE_O3=1 USE_QRCODE=1 FIRST_CLASS_MESSAGING=1 RELEASE=1 USE_UPNPC=1
+    git clone https://github.com/bumbacoin/stronghands-012x
+    cd stronghands-012x
+    qmake USE_O3=1 USE_QRCODE=1 FIRST_CLASS_MESSAGING=1 RELEASE=1 USE_UPNPC=1 stronghands.pro
     make
 
+if you get error
+Error in 'src/qt/bitcoin.qrc': Cannot find file 'locale/bitcoin_zh_TW.qm'
+
+    sudo apt-get install qttools5-dev-tools
+
+then qmake
+
+or error undefined reference to symbol 'dlclose@@GLIBC_2.2.5'
+add to stronghands.pro #452
+
+        # prevents error "undefined reference to symbol dlclose@@GLIBC_2.2.5" when using `-Wl,-Bstatic`
+        LIBS += -ldl
 
 ## Build Qt client on OS X
 
